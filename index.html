@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bond Jewelry — Luxury Fine Jewelry</title>
+<meta name="description" content="Handcrafted luxury jewelry — necklaces, rings, bracelets, earrings. Free shipping over $150.">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/i18n.js"></script>
+</head>
+<body>
+
+<!-- ======================== NAV ======================== -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg class="logo-mark" viewBox="0 0 36 36" fill="none">
+      <circle cx="18" cy="18" r="17" stroke="#C9956E" stroke-width="0.8"/>
+      <circle cx="18" cy="18" r="11" stroke="#C9956E" stroke-width="0.5" stroke-dasharray="2.5 3"/>
+      <circle cx="18" cy="18" r="4.5" fill="#C9956E" opacity="0.9"/>
+      <circle cx="18" cy="6" r="1.8" fill="#C9956E"/>
+      <circle cx="18" cy="30" r="1.8" fill="#C9956E"/>
+      <circle cx="6" cy="18" r="1.8" fill="#C9956E"/>
+      <circle cx="30" cy="18" r="1.8" fill="#C9956E"/>
+      <circle cx="9.5" cy="9.5" r="1.2" fill="#C9956E" opacity="0.6"/>
+      <circle cx="26.5" cy="26.5" r="1.2" fill="#C9956E" opacity="0.6"/>
+      <circle cx="26.5" cy="9.5" r="1.2" fill="#C9956E" opacity="0.6"/>
+      <circle cx="9.5" cy="26.5" r="1.2" fill="#C9956E" opacity="0.6"/>
+    </svg>
+    <div>
+      <span class="logo-text">Bond</span>
+      <span class="logo-sub">Jewelry · Est. 2019</span>
+    </div>
+  </a>
+
+  <ul class="nav-center">
+    <li><a href="#categories" data-i18n="nav.collections">Collections</a></li>
+    <li><a href="#products" data-i18n="nav.shop">Shop</a></li>
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <input type="search" class="nav-search" data-i18n-placeholder="nav.search" placeholder="Search jewelry...">
+    <button class="lang-btn" onclick="BondApp.setLang('en')" id="lang-en">EN</button>
+    <button class="lang-btn" onclick="BondApp.setLang('fr')" id="lang-fr">FR</button>
+    <button class="lang-btn" onclick="BondApp.setLang('ar')" id="lang-ar">AR</button>
+    <button class="theme-btn" onclick="BondApp.toggleTheme()" title="Toggle theme">◐</button>
+    <button class="auth-btn auth-btn-login" onclick="openAuthModal('login')">
+      <span data-i18n="nav.login">Login</span>
+    </button>
+    <span class="auth-btn user-greeting" style="color:var(--rg);font-weight:500;display:none">Guest</span>
+    <button class="auth-btn auth-btn-logout" onclick="BondApp.logout()" style="display:none" data-i18n="nav.logout">Logout</button>
+    <button class="cart-btn" onclick="openCartModal()">
+      🛍 <span data-i18n="nav.cart">Cart</span>
+      <span class="cart-count">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ======================== HERO ======================== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <img class="hero-img"
+    src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=1600&q=75&auto=format"
+    alt="Luxury jewelry"
+    onerror="this.style.display='none'">
+  <div class="hero-dots"></div>
+  <div class="hero-ring hero-ring-1"></div>
+  <div class="hero-ring hero-ring-2"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-i18n="hero.badge">New Collection 2025</div>
+    <h1 class="hero-h1">
+      <span data-i18n="hero.h1a">Adorned in</span><br>
+      <em data-i18n="hero.h1b">Pure Elegance</em>
+    </h1>
+    <p class="hero-sub" data-i18n="hero.sub">Handcrafted fine jewelry that celebrates every moment of your story</p>
+    <div class="hero-ctas">
+      <a href="#products" class="btn-primary" data-i18n="hero.cta1">Explore Collection</a>
+      <a href="#about" class="btn-outline" data-i18n="hero.cta2">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Discover</span>
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+<!-- ======================== MARQUEE ======================== -->
+<div class="marquee">
+  <div class="marquee-track" id="marquee-track">
+    <!-- filled by JS -->
+  </div>
+</div>
+
+<!-- ======================== ABOUT ======================== -->
+<div class="about" id="about">
+  <div class="about-frame reveal">
+    <img class="about-img"
+      src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80&auto=format"
+      alt="Jewelry craftsmanship"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+    <div class="about-img-placeholder" style="display:none">💎</div>
+    <div class="about-badge">
+      <span class="about-badge-num">4.9★</span>
+      <span class="about-badge-txt">Trusted Rating</span>
+    </div>
+  </div>
+  <div class="about-content reveal">
+    <span class="section-label" data-i18n="cats.label">Our Story</span>
+    <h2 class="section-title" style="margin-bottom:14px">Where Luxury Meets<br><em style="font-style:italic;color:var(--rg)">Craftsmanship</em></h2>
+    <p class="section-sub">Born from a passion for timeless beauty, Bond Jewelry creates pieces that become part of your story. Every gem is hand-selected, every setting meticulously crafted for the modern woman who appreciates refined elegance.</p>
+    <div class="about-stats">
+      <div class="stat"><div class="stat-num">12K+</div><div class="stat-lbl">Happy Customers</div></div>
+      <div class="stat"><div class="stat-num">340+</div><div class="stat-lbl">Unique Designs</div></div>
+      <div class="stat"><div class="stat-num">6yrs</div><div class="stat-lbl">Of Excellence</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== CATEGORIES ======================== -->
+<section id="categories">
+  <div class="section-header reveal">
+    <span class="section-label" data-i18n="cats.label">Shop by Category</span>
+    <h2 class="section-title" data-i18n="cats.title">Discover Our Collections</h2>
+  </div>
+  <div class="cats-grid">
+    <div class="cat-card reveal" onclick="filterByCategory('necklaces')">
+      <div class="cat-img-wrap cat-bg-1">
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&q=75&auto=format" alt="Necklaces" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cat-placeholder" style="display:none">📿</div>
+        <div class="cat-dark"></div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name" data-i18n="cats.necklaces">Necklaces</div>
+        <div class="cat-count">86 <span data-i18n="cats.pieces">pieces</span></div>
+        <span class="cat-arrow">Shop Now →</span>
+      </div>
+    </div>
+    <div class="cat-card reveal" onclick="filterByCategory('rings')">
+      <div class="cat-img-wrap cat-bg-2">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&q=75&auto=format" alt="Rings" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cat-placeholder" style="display:none">💍</div>
+        <div class="cat-dark"></div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name" data-i18n="cats.rings">Rings</div>
+        <div class="cat-count">124 <span data-i18n="cats.pieces">pieces</span></div>
+        <span class="cat-arrow">Shop Now →</span>
+      </div>
+    </div>
+    <div class="cat-card reveal" onclick="filterByCategory('bracelets')">
+      <div class="cat-img-wrap cat-bg-3">
+        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&q=75&auto=format" alt="Bracelets" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cat-placeholder" style="display:none">✨</div>
+        <div class="cat-dark"></div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name" data-i18n="cats.bracelets">Bracelets</div>
+        <div class="cat-count">67 <span data-i18n="cats.pieces">pieces</span></div>
+        <span class="cat-arrow">Shop Now →</span>
+      </div>
+    </div>
+    <div class="cat-card reveal" onclick="filterByCategory('earrings')">
+      <div class="cat-img-wrap cat-bg-4">
+        <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?w=400&q=75&auto=format" alt="Earrings" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cat-placeholder" style="display:none">🪙</div>
+        <div class="cat-dark"></div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name" data-i18n="cats.earrings">Earrings</div>
+        <div class="cat-count">98 <span data-i18n="cats.pieces">pieces</span></div>
+        <span class="cat-arrow">Shop Now →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== PRODUCTS ======================== -->
+<section class="products" id="products">
+  <div class="products-header">
+    <div class="reveal">
+      <span class="section-label" data-i18n="products.label">Curated Picks</span>
+      <h2 class="section-title" data-i18n="products.title">Most Loved Pieces</h2>
+    </div>
+    <div class="filter-tabs reveal" id="filter-tabs">
+      <button class="f-tab active" onclick="setFilter(this,'all')" data-i18n="products.all">All</button>
+      <button class="f-tab" onclick="setFilter(this,'necklaces')" data-i18n="cats.necklaces">Necklaces</button>
+      <button class="f-tab" onclick="setFilter(this,'rings')" data-i18n="cats.rings">Rings</button>
+      <button class="f-tab" onclick="setFilter(this,'bracelets')" data-i18n="cats.bracelets">Bracelets</button>
+      <button class="f-tab" onclick="setFilter(this,'earrings')" data-i18n="cats.earrings">Earrings</button>
+    </div>
+  </div>
+  <div class="products-grid" id="products-grid">
+    <div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--tm);font-size:13px;letter-spacing:.12em">Loading products...</div>
+  </div>
+</section>
+
+<!-- ======================== BESTSELLER BANNER ======================== -->
+<div class="bb">
+  <div class="bb-content reveal">
+    <span class="bb-label">Featured Design</span>
+    <h2 class="bb-title">The Signature<br><em>Bond Ring</em></h2>
+    <p class="bb-desc">Our most iconic piece — a timeless pavé band that layers beautifully or stands alone. Crafted in 14K gold with hand-set diamonds.</p>
+    <a href="#products" class="bb-cta" onclick="filterByCategory('rings')">Discover the Ring →</a>
+  </div>
+  <div class="bb-grid reveal">
+    <div class="bb-tile bb-t1">
+      <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=200&q=70&auto=format" style="width:80%;height:80%;object-fit:cover;border-radius:80px 80px 8px 8px" onerror="this.textContent='💍';this.style.fontSize='44px'">
+    </div>
+    <div class="bb-tile bb-t2">
+      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=200&q=70&auto=format" style="width:80%;height:80%;object-fit:cover;border-radius:8px" onerror="this.textContent='✨';this.style.fontSize='44px'">
+    </div>
+    <div class="bb-tile bb-t3">
+      <img src="https://images.unsplash.com/photo-1573408301185-9519f94cb34d?w=200&q=70&auto=format" style="width:80%;height:80%;object-fit:cover;border-radius:8px" onerror="this.textContent='💎';this.style.fontSize='44px'">
+    </div>
+    <div class="bb-tile bb-t4">
+      <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?w=200&q=70&auto=format" style="width:80%;height:80%;object-fit:cover;border-radius:8px 8px 80px 80px" onerror="this.textContent='🌸';this.style.fontSize='44px'">
+    </div>
+  </div>
+</div>
+
+<!-- ======================== REVIEWS ======================== -->
+<section class="reviews" id="reviews">
+  <div class="reviews-header reveal">
+    <span class="section-label" data-i18n="reviews.label">Customer Love</span>
+    <h2 class="section-title" data-i18n="reviews.title">What Our Clients Say</h2>
+    <div class="stars-row">★★★★★</div>
+    <div class="rating-text">4.9 out of 5 · Based on 2,847 reviews</div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-bigquote">"</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Absolutely stunning. The craftsmanship is unreal — I get compliments every single time I wear this necklace. It has become my signature piece.</p>
+      <div class="reviewer"><div class="r-avatar av-1">S</div><div><div class="r-name">Sofia M.</div><div class="r-meta">Celestial Diamond Pendant</div><div class="r-verified">✓ <span data-i18n="reviews.verified">Verified Purchase</span></div></div></div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-bigquote">"</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">I bought this as a birthday gift for myself and I have zero regrets. The packaging alone felt like unwrapping something from a top luxury brand.</p>
+      <div class="reviewer"><div class="r-avatar av-2">A</div><div><div class="r-name">Amelia K.</div><div class="r-meta">Eternal Rose Solitaire</div><div class="r-verified">✓ <span data-i18n="reviews.verified">Verified Purchase</span></div></div></div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-bigquote">"</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Quality that rivals pieces twice the price. I'm obsessed with my tennis bracelet — it goes with everything and feels incredibly solid.</p>
+      <div class="reviewer"><div class="r-avatar av-3">C</div><div><div class="r-name">Camille R.</div><div class="r-meta">Lumière Tennis Bracelet</div><div class="r-verified">✓ <span data-i18n="reviews.verified">Verified Purchase</span></div></div></div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-bigquote">"</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">The stacking rings are so beautiful and delicate yet they feel incredibly solid. I wear all three together and separately — so versatile.</p>
+      <div class="reviewer"><div class="r-avatar av-4">I</div><div><div class="r-name">Isabella T.</div><div class="r-meta">Blossom Stacking Set</div><div class="r-verified">✓ <span data-i18n="reviews.verified">Verified Purchase</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="insta">
+  <div class="reveal">
+    <span class="section-label">As Seen On</span>
+    <h2 class="section-title">@bondjewelry</h2>
+  </div>
+  <div class="insta-grid reveal">
+    <div class="insta-tile"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=300&q=70&auto=format" alt="Instagram"></div>
+    <div class="insta-tile"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&q=70&auto=format" alt="Instagram"></div>
+    <div class="insta-tile"><img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?w=300&q=70&auto=format" alt="Instagram"></div>
+    <div class="insta-tile"><img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=300&q=70&auto=format" alt="Instagram"></div>
+    <div class="insta-tile"><img src="https://images.unsplash.com/photo-1573408301185-9519f94cb34d?w=300&q=70&auto=format" alt="Instagram"></div>
+    <div class="insta-tile"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&q=70&auto=format" alt="Instagram"></div>
+  </div>
+  <p class="insta-handle reveal">Follow our story <a href="#">@bondjewelry</a></p>
+</section>
+<div class="newsletter">
+  <div class="reveal">
+    <h2 class="nl-title">Jewelry That Moves You</h2>
+    <p class="nl-sub">Join our inner circle for exclusive drops, styling tips, and early access to new collections.</p>
+    <div class="nl-form">
+      <input type="email" class="nl-input" placeholder="Your email address" id="nl-email">
+      <button class="nl-btn" onclick="subscribe()">Join</button>
+    </div>
+    <div class="nl-perks">
+      <span class="nl-perk">✦ 10% off first order</span>
+      <span class="nl-perk">✦ Early access</span>
+      <span class="nl-perk">✦ Style guides</span>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <svg width="30" height="30" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#C9956E" stroke-width="0.8"/><circle cx="18" cy="18" r="4.5" fill="#C9956E" opacity="0.9"/><circle cx="18" cy="6" r="1.8" fill="#C9956E"/><circle cx="18" cy="30" r="1.8" fill="#C9956E"/><circle cx="6" cy="18" r="1.8" fill="#C9956E"/><circle cx="30" cy="18" r="1.8" fill="#C9956E"/></svg>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:19px;color:#C9956E;letter-spacing:.12em">Bond Jewelry</span>
+      </div>
+      <p>Crafting timeless pieces for the modern woman. Every detail is a promise of quality, elegance, and love.</p>
+      <div class="footer-socials">
+        <div class="s-icon">📸</div><div class="s-icon">🐦</div><div class="s-icon">📌</div><div class="s-icon">▶️</div>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Shop</h4><ul><li><a href="#">Necklaces</a></li><li><a href="#">Rings</a></li><li><a href="#">Bracelets</a></li><li><a href="#">Earrings</a></li><li><a href="#">Gift Sets</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#">Our Story</a></li><li><a href="#">Craftsmanship</a></li><li><a href="#">Sustainability</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li></ul></div>
+    <div class="footer-col"><h4>Help</h4><ul><li><a href="#">Shipping & Returns</a></li><li><a href="#">Ring Size Guide</a></li><li><a href="#">Jewelry Care</a></li><li><a href="#">Contact Us</a></li><li><a href="#">FAQ</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Bond Jewelry. All rights reserved.</span>
+    <div class="payment-badges"><span class="pay-badge">VISA</span><span class="pay-badge">MC</span><span class="pay-badge">AMEX</span><span class="pay-badge">STRIPE</span><span class="pay-badge">PAYPAL</span></div>
+  </div>
+</footer>
+
+<!-- ======================== CART MODAL ======================== -->
+<div class="modal-overlay" id="cart-modal" onclick="closeOnOverlay(event,'cart-modal')">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <span class="modal-title" data-i18n="cart.title">Your Cart</span>
+      <button class="modal-close" onclick="BondApp.closeModal('cart-modal')">✕</button>
+    </div>
+    <div class="modal-body" id="cart-body"></div>
+    <div class="modal-footer" id="cart-footer" style="display:none">
+      <div class="cart-summary">
+        <div class="cart-row"><span data-i18n="cart.subtotal">Subtotal</span><span id="cart-subtotal">$0</span></div>
+        <div class="cart-row"><span data-i18n="cart.shipping">Shipping</span><span id="cart-shipping">FREE</span></div>
+        <div class="cart-row"><span data-i18n="cart.total">Total</span><span id="cart-total">$0</span></div>
+      </div>
+      <button class="cart-checkout-btn" onclick="BondApp.closeModal('cart-modal');openCheckoutModal()" data-i18n="cart.checkout">Proceed to Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== CHECKOUT MODAL ======================== -->
+<div class="modal-overlay" id="checkout-modal" onclick="closeOnOverlay(event,'checkout-modal')">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <span class="modal-title" data-i18n="checkout.title">Checkout</span>
+      <button class="modal-close" onclick="BondApp.closeModal('checkout-modal')">✕</button>
+    </div>
+    <div class="modal-body" id="checkout-body"></div>
+  </div>
+</div>
+
+<!-- ======================== AUTH MODAL ======================== -->
+<div class="modal-overlay" id="auth-modal" onclick="closeOnOverlay(event,'auth-modal')">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <span class="modal-title" id="auth-modal-title" data-i18n="auth.login">Sign In</span>
+      <button class="modal-close" onclick="BondApp.closeModal('auth-modal')">✕</button>
+    </div>
+    <div class="modal-body" id="auth-body"></div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+
+/* ====== INIT ====== */
+let currentFilter = 'all';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  BondApp.setTheme(localStorage.getItem('bj_theme') || 'light');
+  initLangBtns();
+  await BondApp.loadProducts();
+  renderProducts('all');
+  renderMarquee();
+  initReveal();
+  BondApp.renderApp();
+  BondApp.updateAuthUI();
+  updateAuthBtnVisibility();
+});
+
+function initLangBtns() {
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    const code = b.id.replace('lang-','');
+    b.classList.toggle('active', code === BondApp.getLang());
+  });
+}
+
+/* ====== MARQUEE ====== */
+function renderMarquee() {
+  const items = BondApp.t('marquee');
+  const track = document.getElementById('marquee-track');
+  let html = '';
+  for (let i = 0; i < 2; i++) {
+    items.forEach(item => {
+      html += `<div class="marquee-item">${item}<span class="m-dot"></span></div>`;
+    });
+  }
+  track.innerHTML = html;
+}
+
+/* ====== PRODUCTS ====== */
+function renderProducts(filter) {
+  currentFilter = filter;
+  const lang = BondApp.getLang();
+  const products = BondApp.getProducts();
+  const wishlist = BondApp.getWishlist();
+  const grid = document.getElementById('products-grid');
+
+  const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+
+  if (!filtered.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--tm);font-size:13px;letter-spacing:.12em">No products found.</div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const badge = p.badge ? `<span class="p-badge badge-${p.badge}">${p.badge === 'new' ? 'New' : p.badge === 'sale' ? 'Sale' : 'Bestseller'}</span>` : '';
+    const oldPrice = p.oldPrice ? `<span class="price-old">$${p.oldPrice}</span>` : '';
+    const isWishlisted = wishlist.includes(p.id);
+    const addBtn = p.inStock
+      ? `<button class="add-btn" onclick="BondApp.addToCart(BondApp.getProducts().find(p=>p.id==='${p.id}'))" title="${BondApp.t('products.addCart')}">+</button>`
+      : `<button class="add-btn out" disabled title="${BondApp.t('products.outStock')}">✕</button>`;
+    const pBg = ['p-bg-1','p-bg-2','p-bg-3','p-bg-4','p-bg-5','p-bg-6'];
+    const bg = pBg[products.indexOf(p) % pBg.length];
+
+    return `
+    <div class="product-card reveal" data-cat="${p.category}">
+      <div class="p-img-wrap ${bg}">
+        ${badge}
+        <button class="wish-btn ${isWishlisted ? 'active' : ''}" data-wishlist="${p.id}" onclick="BondApp.toggleWishlist('${p.id}')">${isWishlisted ? '❤️' : '🤍'}</button>
+        <img src="${p.image}" alt="${p.name[lang]}"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+          loading="lazy">
+        <div class="p-img-placeholder" style="display:none;font-size:72px">
+          ${p.category === 'necklaces' ? '📿' : p.category === 'rings' ? '💍' : p.category === 'bracelets' ? '✨' : '🪙'}
+        </div>
+      </div>
+      <div class="p-info">
+        <div class="p-tag">${p.category.charAt(0).toUpperCase() + p.category.slice(1)}</div>
+        <div class="p-name">${p.name[lang]}</div>
+        <div class="p-desc">${p.desc[lang]}</div>
+        <div class="p-footer">
+          <div class="price-wrap"><span class="price">$${p.price}</span>${oldPrice}</div>
+          ${addBtn}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  initReveal();
+}
+
+function setFilter(btn, cat) {
+  document.querySelectorAll('.f-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts(cat);
+}
+
+function filterByCategory(cat) {
+  currentFilter = cat;
+  document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => {
+    const tab = [...document.querySelectorAll('.f-tab')].find(t => t.textContent.toLowerCase().includes(cat.slice(0,5)));
+    if (tab) setFilter(tab, cat);
+  }, 400);
+}
+
+/* ====== CART MODAL ====== */
+function openCartModal() {
+  BondApp.renderCartModal();
+  BondApp.openModal('cart-modal');
+}
+
+/* ====== CHECKOUT ====== */
+function openCheckoutModal() {
+  if (!BondApp.getCart().length) { BondApp.showToast('Your cart is empty'); return; }
+  renderCheckout();
+  BondApp.openModal('checkout-modal');
+}
+
+function renderCheckout() {
+  const t = (k) => BondApp.t(k);
+  const body = document.getElementById('checkout-body');
+  body.innerHTML = `
+    <div class="co-section">
+      <div class="co-section-title">${t('checkout.info')}</div>
+      <div class="form-group"><label>${t('checkout.name')}</label><input type="text" id="co-name" placeholder="Sofia Martin"></div>
+      <div class="form-row">
+        <div class="form-group"><label>${t('checkout.email')}</label><input type="email" id="co-email" placeholder="sofia@example.com"></div>
+        <div class="form-group"><label>${t('checkout.phone')}</label><input type="tel" id="co-phone" placeholder="+1 555 0100"></div>
+      </div>
+      <div class="form-group"><label>${t('checkout.address')}</label><input type="text" id="co-address" placeholder="123 Main Street"></div>
+      <div class="form-row">
+        <div class="form-group"><label>${t('checkout.city')}</label><input type="text" id="co-city" placeholder="Paris"></div>
+        <div class="form-group"><label>${t('checkout.zip')}</label><input type="text" id="co-zip" placeholder="75001"></div>
+      </div>
+      <div class="form-group"><label>${t('checkout.country')}</label>
+        <select id="co-country"><option>France</option><option>United States</option><option>Morocco</option><option>Canada</option><option>United Kingdom</option><option>Germany</option><option>UAE</option></select>
+      </div>
+    </div>
+    <div class="co-section">
+      <div class="co-section-title">${t('checkout.payment')}</div>
+      <div class="pay-methods">
+        <div class="pay-method selected" onclick="selectPayMethod(this,'card')">
+          <div class="pay-method-icon">💳</div>
+          <div class="pay-method-name">Card</div>
+        </div>
+        <div class="pay-method" onclick="selectPayMethod(this,'stripe')">
+          <div class="pay-method-icon" style="font-size:18px;font-weight:700;color:#635BFF">S</div>
+          <div class="pay-method-name">Stripe</div>
+        </div>
+        <div class="pay-method" onclick="selectPayMethod(this,'paypal')">
+          <div class="pay-method-icon" style="font-size:18px;color:#003087;font-weight:700">P</div>
+          <div class="pay-method-name">PayPal</div>
+        </div>
+      </div>
+      <div id="card-fields">
+        <div class="form-group"><label>${t('checkout.cardNum')}</label><input type="text" id="co-card" placeholder="4242 4242 4242 4242" maxlength="19" oninput="formatCard(this)"></div>
+        <div class="form-row">
+          <div class="form-group"><label>${t('checkout.expiry')}</label><input type="text" id="co-exp" placeholder="MM/YY" maxlength="5"></div>
+          <div class="form-group"><label>${t('checkout.cvv')}</label><input type="text" id="co-cvv" placeholder="123" maxlength="3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="co-section" style="border:none">
+      <div class="cart-summary">
+        <div class="cart-row"><span>${t('cart.subtotal')}</span><span>$${BondApp.cartTotal().toFixed(0)}</span></div>
+        <div class="cart-row"><span>${t('cart.shipping')}</span><span>${BondApp.cartTotal() >= 150 ? t('cart.free') : '$12'}</span></div>
+        <div class="cart-row"><span>${t('cart.total')}</span><span>$${(BondApp.cartTotal() + (BondApp.cartTotal() >= 150 ? 0 : 12)).toFixed(0)}</span></div>
+      </div>
+      <button class="co-submit" onclick="placeOrder()">${t('checkout.placeOrder')}</button>
+    </div>`;
+}
+
+function selectPayMethod(el, method) {
+  document.querySelectorAll('.pay-method').forEach(m => m.classList.remove('selected'));
+  el.classList.add('selected');
+  const cf = document.getElementById('card-fields');
+  if (cf) cf.style.display = method === 'card' ? '' : 'none';
+  if (method === 'stripe') BondApp.showToast('Stripe — Redirecting to secure payment...');
+  if (method === 'paypal') BondApp.showToast('PayPal — Redirecting to PayPal...');
+}
+
+function formatCard(input) {
+  input.value = input.value.replace(/\D/g,'').replace(/(.{4})/g,'$1 ').trim().slice(0,19);
+}
+
+function placeOrder() {
+  const email = document.getElementById('co-email')?.value;
+  const name = document.getElementById('co-name')?.value;
+  if (!email || !name) { BondApp.showToast('Please fill in all required fields'); return; }
+  const body = document.getElementById('checkout-body');
+  body.innerHTML = `
+    <div class="co-success">
+      <div class="co-success-icon">✦</div>
+      <h3>${BondApp.t('checkout.success')}</h3>
+      <p>${BondApp.t('checkout.successSub')}</p>
+      <p style="font-size:12px;color:var(--tm);margin-bottom:28px">Order #BJ-${Math.floor(Math.random()*90000+10000)} · ${new Date().toLocaleDateString()}</p>
+      <button class="btn-primary" onclick="BondApp.closeModal('checkout-modal')">${BondApp.t('checkout.backShop')}</button>
+    </div>`;
+  localStorage.removeItem('bj_cart');
+  BondApp.updateCartUI();
+}
+
+/* ====== AUTH ====== */
+function openAuthModal(mode) {
+  renderAuth(mode);
+  BondApp.openModal('auth-modal');
+}
+
+function renderAuth(mode) {
+  const t = (k) => BondApp.t(k);
+  const isLogin = mode === 'login';
+  document.getElementById('auth-modal-title').textContent = t(isLogin ? 'auth.login' : 'auth.register');
+  const body = document.getElementById('auth-body');
+  body.innerHTML = `
+    <div style="text-align:center;margin-bottom:24px">
+      <svg width="40" height="40" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#C9956E" stroke-width="0.8"/><circle cx="18" cy="18" r="4.5" fill="#C9956E"/><circle cx="18" cy="6" r="1.8" fill="#C9956E"/><circle cx="18" cy="30" r="1.8" fill="#C9956E"/><circle cx="6" cy="18" r="1.8" fill="#C9956E"/><circle cx="30" cy="18" r="1.8" fill="#C9956E"/></svg>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--rg);letter-spacing:.12em;display:block;margin-top:6px">Bond Jewelry</span>
+    </div>
+    <div class="auth-error" id="auth-error">Invalid credentials. Please try again.</div>
+    <div class="auth-form">
+      ${!isLogin ? `<div class="form-group"><label>${t('auth.name')}</label><input type="text" id="auth-name" placeholder="Sofia Martin"></div>` : ''}
+      <div class="form-group"><label>${t('auth.email')}</label><input type="email" id="auth-email" placeholder="sofia@example.com"></div>
+      <div class="form-group"><label>${t('auth.password')}</label><input type="password" id="auth-pass" placeholder="••••••••"></div>
+      ${!isLogin ? `<div class="form-group"><label>${t('auth.confirmPass')}</label><input type="password" id="auth-cpass" placeholder="••••••••"></div>` : ''}
+      ${isLogin ? `<div style="text-align:right;margin-bottom:14px"><a href="#" style="font-size:11px;color:var(--rg);text-decoration:none">${t('auth.forgotPass')}</a></div>` : ''}
+      <button class="auth-submit" onclick="${isLogin ? 'doLogin()' : 'doRegister()'}">
+        ${t(isLogin ? 'auth.loginBtn' : 'auth.registerBtn')}
+      </button>
+    </div>
+    <div class="auth-divider">${t('auth.or')}</div>
+    <button class="auth-google">🌐 ${t('auth.google')}</button>
+    <div class="auth-switch">
+      ${isLogin ? t('auth.noAccount') : t('auth.hasAccount')}
+      <a onclick="renderAuth('${isLogin ? 'register' : 'login'}')">${t(isLogin ? 'auth.register' : 'auth.login')}</a>
+    </div>`;
+}
+
+function doLogin() {
+  const email = document.getElementById('auth-email').value;
+  const pass = document.getElementById('auth-pass').value;
+  if (!BondApp.login(email, pass)) {
+    const err = document.getElementById('auth-error');
+    if (err) err.style.display = 'block';
+  } else { updateAuthBtnVisibility(); }
+}
+
+function doRegister() {
+  const name = document.getElementById('auth-name')?.value;
+  const email = document.getElementById('auth-email').value;
+  const pass = document.getElementById('auth-pass').value;
+  const cpass = document.getElementById('auth-cpass')?.value;
+  if (pass !== cpass) { BondApp.showToast('Passwords do not match'); return; }
+  if (!BondApp.register(name, email, pass)) {
+    BondApp.showToast('This email is already registered');
+  } else { updateAuthBtnVisibility(); }
+}
+
+function updateAuthBtnVisibility() {
+  const user = BondApp.getUser();
+  document.querySelectorAll('.auth-btn-login').forEach(el => el.style.display = user ? 'none' : '');
+  document.querySelectorAll('.auth-btn-logout').forEach(el => el.style.display = user ? '' : 'none');
+  document.querySelectorAll('.user-greeting').forEach(el => {
+    el.style.display = user ? '' : 'none';
+    el.textContent = user ? user.name.split(' ')[0] : '';
+  });
+}
+
+/* ====== NEWSLETTER ====== */
+function subscribe() {
+  const email = document.getElementById('nl-email').value;
+  if (email && email.includes('@')) {
+    BondApp.showToast(BondApp.t('toast.subscribed'));
+    document.getElementById('nl-email').value = '';
+  } else { BondApp.showToast('Please enter a valid email'); }
+}
+
+/* ====== UTILS ====== */
+function closeOnOverlay(e, id) {
+  if (e.target === e.currentTarget) BondApp.closeModal(id);
+}
+
+function initReveal() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 70);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
+}
+
+/* ====== LANG CHANGE ====== */
+const _origSetLang = BondApp.setLang.bind(BondApp);
+BondApp.setLang = (l) => {
+  _origSetLang(l);
+  initLangBtns();
+  renderProducts(currentFilter);
+  renderMarquee();
+  if (document.getElementById('cart-modal').classList.contains('open')) BondApp.renderCartModal();
+};
+
+/* ====== SEARCH ====== */
+document.querySelector('.nav-search')?.addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  if (!q) { renderProducts(currentFilter); return; }
+  const lang = BondApp.getLang();
+  const results = BondApp.getProducts().filter(p =>
+    p.name[lang].toLowerCase().includes(q) ||
+    p.category.includes(q) ||
+    p.desc[lang].toLowerCase().includes(q)
+  );
+  const grid = document.getElementById('products-grid');
+  if (!results.length) { grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--tm);font-size:13px">No results for "${e.target.value}"</div>`; return; }
+  const lang2 = lang;
+  const wishlist = BondApp.getWishlist();
+  grid.innerHTML = results.map(p => {
+    const isW = wishlist.includes(p.id);
+    return `<div class="product-card reveal" data-cat="${p.category}">
+      <div class="p-img-wrap">
+        ${p.badge ? `<span class="p-badge badge-${p.badge}">${p.badge}</span>` : ''}
+        <button class="wish-btn ${isW ? 'active' : ''}" data-wishlist="${p.id}" onclick="BondApp.toggleWishlist('${p.id}')">${isW ? '❤️' : '🤍'}</button>
+        <img src="${p.image}" alt="${p.name[lang2]}" onerror="this.style.display='none'" loading="lazy">
+      </div>
+      <div class="p-info">
+        <div class="p-tag">${p.category}</div>
+        <div class="p-name">${p.name[lang2]}</div>
+        <div class="p-desc">${p.desc[lang2]}</div>
+        <div class="p-footer">
+          <div class="price-wrap"><span class="price">$${p.price}</span>${p.oldPrice ? `<span class="price-old">$${p.oldPrice}</span>` : ''}</div>
+          ${p.inStock ? `<button class="add-btn" onclick="BondApp.addToCart(BondApp.getProducts().find(p=>p.id==='${p.id}'))">+</button>` : `<button class="add-btn out" disabled>✕</button>`}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  initReveal();
+});
+
+/* ====== ESC KEY ====== */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    ['cart-modal','checkout-modal','auth-modal'].forEach(id => BondApp.closeModal(id));
+  }
+});
+</script>
+</body>
+</html>

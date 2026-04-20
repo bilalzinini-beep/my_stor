@@ -1,0 +1,254 @@
+[
+  {
+    "id": "BJ001",
+    "slug": "celestial-diamond-pendant",
+    "category": "necklaces",
+    "badge": "new",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80"
+    ],
+    "name": { "en": "Celestial Diamond Pendant", "fr": "Pendentif Diamant Céleste", "ar": "قلادة الماس السماوية" },
+    "desc": {
+      "en": "18K rose gold, VS clarity diamond, 42cm adjustable chain",
+      "fr": "Or rose 18K, diamant clarté VS, chaîne réglable 42cm",
+      "ar": "ذهب وردي 18 قيراط، ماس نقي، سلسلة قابلة للتعديل 42 سم"
+    },
+    "price": 348,
+    "oldPrice": null,
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 142,
+    "material": "18K Rose Gold",
+    "stone": "Diamond",
+    "stripeId": "price_celestial_pendant"
+  },
+  {
+    "id": "BJ002",
+    "slug": "eternal-rose-solitaire",
+    "category": "rings",
+    "badge": "bestseller",
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80"
+    ],
+    "name": { "en": "Eternal Rose Solitaire", "fr": "Solitaire Rose Éternel", "ar": "خاتم الوردة الأبدية" },
+    "desc": {
+      "en": "14K gold, 0.5ct lab-grown diamond, sizes 5–9",
+      "fr": "Or 14K, diamant cultivé 0.5ct, tailles 5–9",
+      "ar": "ذهب 14 قيراط، ماس مزروع 0.5 قيراط"
+    },
+    "price": 520,
+    "oldPrice": 680,
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 218,
+    "material": "14K Gold",
+    "stone": "Lab Diamond",
+    "stripeId": "price_eternal_solitaire"
+  },
+  
+  {
+    "id": "BJ003",
+    "slug": "lumiere-tennis-bracelet",
+    "category": "bracelets",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
+      "https://images.unsplash.com/photo-1573408301185-9519f94cb34d?w=800&q=80"
+    ],
+    "name": { "en": "Lumière Tennis Bracelet", "fr": "Bracelet Tennis Lumière", "ar": "سوار تنس لوميير" },
+    "desc": {
+      "en": "Sterling silver, pavé sapphires, 17cm",
+      "fr": "Argent sterling, saphirs pavés, 17cm",
+      "ar": "فضة استرلينية، أحجار زاهية، 17 سم"
+    },
+    "price": 275,
+    "oldPrice": null,
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 97,
+    "material": "Sterling Silver",
+    "stone": "Sapphire",
+    "stripeId": "price_lumiere_bracelet"
+  },
+
+  {   
+    "id": "BJ004",
+    "slug": "pearl-drop-elegance",
+    "category": "earrings",
+    "badge": "new",
+    "image": "https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?w=800&q=80",
+      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&q=80"
+    ],
+    "name": { "en": "Pearl Drop Elegance", "fr": "Boucles Perle Élégance", "ar": "أقراط اللؤلؤ الأنيقة" },
+    "desc": {
+      "en": "South Sea pearls, gold-filled hooks, 4cm drop",
+      "fr": "Perles de mer du Sud, crochets plaqués or, 4cm",
+      "ar": "لآلئ بحر الجنوب، خطافات مطلية بالذهب"
+    },
+    "price": 195,
+    "oldPrice": null,
+    "inStock": true,
+    "rating": 4.7,
+    "reviews": 63,
+    "material": "Gold Filled",
+    "stone": "Pearl",
+    "stripeId": "price_pearl_drop"
+  },
+  {
+    "id": "BJ005",
+    "slug": "blossom-stacking-set",
+    "category": "rings",
+    "badge": "sale",
+    "image": "https://images.unsplash.com/photo-1573408301185-9519f94cb34d?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1573408301185-9519f94cb34d?w=800&q=80",
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80"
+    ],
+    "name": { "en": "Blossom Stacking Set", "fr": "Set Empilable Blossom", "ar": "مجموعة خواتم بلوسوم" },
+    "desc": {
+      "en": "Set of 3 — rose gold vermeil, delicate bands",
+      "fr": "Lot de 3 — vermeil or rose, anneaux délicats",
+      "ar": "مجموعة 3 خواتم — ذهب وردي"
+    },
+    "price": 165,
+    "oldPrice": 220,
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 184,
+    "material": "Rose Gold Vermeil",
+    "stone": "None",
+    "stripeId": "price_blossom_set"
+  },
+  {
+    "id": "BJ006",
+    "slug": "luna-crescent-charm",
+    "category": "necklaces",
+    "badge": "bestseller",
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80"
+    ],
+    "name": { "en": "Luna Crescent Charm", "fr": "Charme Croissant Luna", "ar": "تميمة هلال لونا" },
+    "desc": {
+      "en": "14K gold, moonstone accent, layering necklace",
+      "fr": "Or 14K, accent pierre de lune, collier superposable",
+      "ar": "ذهب 14 قيراط، حجر القمر، قلادة للتطبيق"
+    },
+    "price": 230,
+    "oldPrice": null,
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 156,
+    "material": "14K Gold",
+    "stone": "Moonstone",
+    "stripeId": "price_luna_crescent"
+  },
+  {
+    "id": "BJ007",
+    "slug": "aurora-hoop-earrings",
+    "category": "earrings",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&q=80",
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?w=800&q=80"
+    ],
+    "name": { "en": "Aurora Hoop Earrings", "fr": "Créoles Aurora", "ar": "أقراط أورورا الدائرية" },
+    "desc": {
+      "en": "18K gold, 25mm diamond-cut hoops",
+      "fr": "Or 18K, créoles diamantées 25mm",
+      "ar": "ذهب 18 قيراط، أقراط دائرية 25 مم"
+    },
+    "price": 310,
+    "oldPrice": null,
+    "inStock": false,
+    "rating": 4.6,
+    "reviews": 41,
+    "material": "18K Gold",
+    "stone": "None",
+    "stripeId": "price_aurora_hoops"
+  },
+  {
+    "id": "BJ008",
+    "slug": "garden-charm-bracelet",
+    "category": "bracelets",
+    "badge": "new",
+    "image": "https://images.unsplash.com/photo-1573408301185-9519f94cb34d?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1573408301185-9519f94cb34d?w=800&q=80",
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80"
+    ],
+    "name": { "en": "Garden Charm Bracelet", "fr": "Bracelet Charmes Jardin", "ar": "سوار حدائق السحر" },
+    "desc": {
+      "en": "Sterling silver, floral charms, adjustable 16–19cm",
+      "fr": "Argent sterling, charmes floraux, ajustable 16–19cm",
+      "ar": "فضة استرلينية، قلائد زهرية، قابل للتعديل"
+    },
+    "price": 188,
+    "oldPrice": null,
+    "inStock": true,
+    "rating": 4.8,
+    "reviews": 79,
+    "material": "Sterling Silver",
+    "stone": "Mixed",
+    "stripeId": "price_garden_charm"
+  },
+  {
+    "id": "BJ009",
+    "slug": "starlight-ear-cuff",
+    "category": "earrings",
+    "badge": "sale",
+    "image": "https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?w=800&q=80",
+      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&q=80"
+    ],
+    "name": { "en": "Starlight Ear Cuff", "fr": "Boucle d'Oreille Starlight", "ar": "كفة الأذن ضوء النجوم" },
+    "desc": {
+      "en": "14K gold, starburst design, non-pierced fit",
+      "fr": "Or 14K, design étoile, convient sans piercing",
+      "ar": "ذهب 14 قيراط، تصميم نجمي، يناسب بدون ثقب"
+    },
+    "price": 145,
+    "oldPrice": 195,
+    "inStock": true,
+    "rating": 4.7,
+    "reviews": 58,
+    "material": "14K Gold",
+    "stone": "None",
+    "stripeId": "price_starlight_cuff"
+  },
+  {
+    "id": "BJ010",
+    "slug": "midnight-sapphire-ring",
+    "category": "rings",
+    "badge": null,
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80"
+    ],
+    "name": { "en": "Midnight Sapphire Ring", "fr": "Bague Saphir de Minuit", "ar": "خاتم الياقوت منتصف الليل" },
+    "desc": {
+      "en": "18K white gold, deep blue sapphire, sizes 5–9",
+      "fr": "Or blanc 18K, saphir bleu profond, tailles 5–9",
+      "ar": "ذهب أبيض 18 قيراط، ياقوت أزرق عميق"
+    },
+    "price": 450,
+    "oldPrice": null,
+    "inStock": true,
+    "rating": 4.9,
+    "reviews": 132,
+    "material": "18K White Gold",
+    "stone": "Sapphire",
+    "stripeId": "price_midnight_sapphire"
+  }
+]
